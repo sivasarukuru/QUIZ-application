@@ -23,6 +23,10 @@ h1 {
   padding: 10px;
   cursor: pointer;
 }
+.option.selected {
+  background-color: green;
+  color: white;
+}
 
 #nextBtn {
   width: 100%;

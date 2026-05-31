@@ -29,6 +29,12 @@ function showQuestion() {
 
     btn.onclick = () => {
       selectedAnswer = option;
+
+      document.querySelectorAll(".option").forEach((b) => {
+        b.classList.remove("selected");
+      });
+
+      btn.classList.add("selected");
     };
 
     optionsDiv.appendChild(btn);
