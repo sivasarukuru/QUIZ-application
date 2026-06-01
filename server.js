@@ -29,12 +29,16 @@ db.connect((err) => {
 
 // API
 app.get("/questions", (req, res) => {
+  console.log("Questions API called");
+
   db.query("SELECT * FROM questions", (err, results) => {
     if (err) {
-      res.status(500).json(err);
-    } else {
-      res.json(results);
+      console.log("Query Error:", err);
+      return res.status(500).json(err);
     }
+
+    console.log("Rows:", results.length);
+    res.json(results);
   });
 });
 
