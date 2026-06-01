@@ -9,7 +9,7 @@ app.use(express.static("public"));
 const db = mysql.createConnection({
   host: "mysql-9682be3-quizdatabase.l.aivencloud.com",
   user: "avnadmin",
-  password: "YOUR_AIVEN_PASSWORD",
+  password: "AVNS Xc8HyOR-FaPJOKZEUGU",
   database: "defaultdb",
   port: 22847,
   ssl: {
