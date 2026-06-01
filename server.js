@@ -7,17 +7,21 @@ app.use(express.json());
 app.use(express.static("public"));
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "Siva@2004",
-  database: "quizdb",
+  host: "mysql-9682be3-quizdatabase.l.aivencloud.com",
+  user: "avnadmin",
+  password: "YOUR_AIVEN_PASSWORD",
+  database: "defaultdb",
+  port: 22847,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 db.connect((err) => {
   if (err) {
-    console.log(err);
+    console.error("Database Error:", err);
   } else {
-    console.log("MySQL Connected");
+    console.log("Connected to Aiven MySQL");
   }
 });
 
